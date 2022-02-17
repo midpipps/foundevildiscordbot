@@ -1,0 +1,6 @@
+#if on linux you are going to need some extra stuff
+#apt install libffi-dev libnacl-dev python3-dev
+
+#otherwise grab your favorite python 3 version above 3.4 and use these requirements
+discord.py
+requests

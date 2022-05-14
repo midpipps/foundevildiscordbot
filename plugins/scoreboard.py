@@ -22,9 +22,9 @@ class Scoreboard(PluginInterface):
         called when a new message is received will return the scoreboard and other stats
         '''
         if self.handles(message):
-            logging.getLogger('discord').info('Message from {0.author.display_name}: {0.content} SCORBOARD Picked it up'.format(message))
-            if message.author.discriminator == '3874':
-                logging.getLogger('discord').info('{0} was Jacob we do not respond to jacob'.format(message.author.display_name))
+            logging.getLogger('discord').info('Message from {0.author.display_name}: {0.content} SCOREBOARD Picked it up'.format(message))
+            if message.author.discriminator in config.TROLL_IDS:
+                logging.getLogger('discord').info('{0} asked so TROLLOLOL'.format(message.author.display_name))
                 await message.channel.send("You are Number 1 in our hearts.")
             else:
                 logging.getLogger('discord').info('{0} asked for scoreboard'.format(message.author.display_name))

@@ -1,6 +1,8 @@
 #project specific
 config/__init__.py
 logs/
+db/*.db
+teststuff.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

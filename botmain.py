@@ -17,6 +17,8 @@ PLUGINLIST = [plugins.scoreboard.Scoreboard()]
 class FoundEvilTheBot(discord.Client):
     async def on_ready(self):
         logger.info('Logged on as {name}!'.format(name=self.user.display_name))
+        for entry in PLUGINLIST:
+            entry.init()
 
     async def on_message(self, message:discord.Message):
         if message.content.startswith("/"):

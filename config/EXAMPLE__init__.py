@@ -13,6 +13,9 @@ LOG_FILENAME =  "discord.log"
 LOG_LEVEL = logging.DEBUG
 LOG_ROTATION_DAYS = 3
 
+#database stuff
+DB_FOLDER = "db/"
+
 #metactf
 META_CTF_URL = "metactf_url"
 META_DB = "dbname.db"

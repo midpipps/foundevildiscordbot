@@ -30,3 +30,9 @@ class PluginInterface(object):
         return helptext if you are handling this help None otherwise
         '''
         raise NotImplementedError("specific_help has not been defined yet")
+
+    def init(self):
+        '''
+        initialize the system
+        '''
+        raise NotImplementedError("init has not been defined yet")

@@ -100,12 +100,13 @@ class Scoreboard(PluginInterface):
         '''
         if self.handles(message):
             logging.getLogger('discord').info('Message from {0.author.display_name}: {0.content} SCOREBOARD Picked it up'.format(message))
-            if message.author.discriminator in config.TROLL_IDS:
-                logging.getLogger('discord').info('{0} asked so TROLLOLOL'.format(message.author.display_name))
-                await message.channel.send("You are Number 1 in our hearts.")
-            else:
-                logging.getLogger('discord').info('{0} asked for scoreboard'.format(message.author.display_name))
-                await message.channel.send(self.getscoreboardupdate())
+            #TROLL_IDS in Config\Example_init_.py is empty. So this is next best thing...
+            #if message.author.discriminator in config.TROLL_IDS:
+            #    logging.getLogger('discord').info('{0} asked so TROLLOLOL'.format(message.author.display_name))
+            #    await message.channel.send("You are Number 1 in our hearts.")
+            #else:
+            logging.getLogger('discord').info('{0} asked for scoreboard'.format(message.author.display_name))
+            await message.channel.send(self.getscoreboardupdate())
     
     def min_help(self) -> str:
         '''
